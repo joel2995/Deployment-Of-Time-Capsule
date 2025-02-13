@@ -1,0 +1,7 @@
+.create-capsule-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-out;
+}

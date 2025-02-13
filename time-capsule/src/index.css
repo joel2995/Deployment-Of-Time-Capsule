@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light mode (Black & White) */
+  --primary: 0 0 0;
+  --surface: 255 255 255;
+  --text-secondary: 115 115 115;
+  --background: #ffffff;
+  --border-color: rgb(0 0 0 / 0.1);
+  --shadow-color: rgb(0 0 0 / 0.1);
+}
+
+[data-theme='dark'] {
+  --primary: 255 255 255;
+  --surface: 20 20 20;
+  --text-secondary: 160 160 160;
+  --background: #0a0a0a;
+  --border-color: rgb(255 255 255 / 0.1);
+  --shadow-color: rgb(255 255 255 / 0.1);
+}
+
+/* // Add these styles to force dark theme */
+body {
+  background-color: #030711;
+  color: white;
+}
+
+/* Optional: Add this if you want to force dark scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.4);
+}
+
+@layer components {
+  .glass {
+    @apply bg-white border border-black/10 shadow-lg;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md border border-black/10 p-6 hover:shadow-lg transition-shadow;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-lg inline-flex items-center gap-2 transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-black text-white hover:bg-black/90;
+  }
+  
+  .btn-secondary {
+    @apply border border-black text-black hover:bg-black/5;
+  }
+}

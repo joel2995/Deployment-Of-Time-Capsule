@@ -1,0 +1,293 @@
+.container {
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background: var(--card-background);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.welcome-text {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+.coins-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  color: var(--text-secondary);
+}
+
+.coin-icon {
+  color: var(--primary);
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.capsules-section {
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+.leaderboard-preview {
+  margin-top: 2rem;
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.trophy-icon {
+  color: #030711;
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--hover-background);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 75%;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.loader {
+  border: 4px solid var(--border-color);
+  border-top: 4px solid var(--primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .coins-display {
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
+
+  .dashboard-header {
+    padding: 1.25rem;
+  }
+
+  .user-info {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .welcome-text {
+    text-align: center;
+    font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-header {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 0.75rem;
+    margin: 0.75rem;
+  }
+
+  .header-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .welcome-text {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 0 0.5rem;
+  }
+
+  .coins-display {
+    font-size: 0.875rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .dashboard-header {
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+    padding: 0 0.25rem;
+  }
+
+  .coins-display {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  .grid {
+    gap: 0.75rem;
+  }
+}

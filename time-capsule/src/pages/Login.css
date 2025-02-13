@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--background-gradient);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  background-color: var(--card-background);
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  color: var(--text-primary);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+  font-size: 24px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary);
+  z-index: 10;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  background-color: var(--input-background);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px var(--primary);
+  outline: none;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary);
+  color: var(--background);
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.forgot-password {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text-primary);
+}
+
+.signup-link .link {
+  color: var(--primary);
+  margin-left: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.toast.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.toast.error {
+  background-color: #F44336;
+  color: white;
+}
+
+.toast-close {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

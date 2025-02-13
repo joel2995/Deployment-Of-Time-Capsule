@@ -1,0 +1,149 @@
+.home-container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  margin-bottom: 4rem;
+  border-radius: 12px;
+}
+
+.hero-icon {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  width: clamp(48px, 8vw, 64px);
+  height: clamp(48px, 8vw, 64px);
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Featured Section */
+.featured-section {
+  padding: 0 1rem;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.capsules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.capsule-card {
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease;
+}
+
+.capsule-icon {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.capsule-title {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.capsule-description {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+.capsule-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .capsules-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .capsules-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .capsule-card {
+    padding: 1rem;
+  }
+
+  .capsule-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .capsule-card {
+    background: var(--card-background);
+    border-color: var(--border-color);
+  }
+}

@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-orbitron bg-light-surface text-light-text dark:bg-dark-surface dark:text-dark-text;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-base cursor-pointer transition-all duration-200 font-orbitron;
+  }
+
+  .btn-primary {
+    @apply bg-light-primary text-white border border-light-primary 
+           dark:bg-dark-primary dark:border-dark-primary
+           hover:bg-light-hover dark:hover:bg-dark-hover;
+  }
+
+  .btn-secondary {
+    @apply bg-light-surface text-light-text border border-light-primary
+           dark:bg-dark-surface dark:text-dark-text dark:border-dark-primary
+           hover:bg-light-hover/10 dark:hover:bg-dark-hover/10;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 pl-11 border border-light-primary rounded-lg text-base
+           bg-white dark:bg-transparent
+           text-light-text dark:text-dark-text
+           font-orbitron transition-all duration-300
+           focus:outline-none focus:border-light-primary dark:focus:border-dark-primary
+           focus:ring-2 focus:ring-light-primary/20 dark:focus:ring-dark-primary/20;
+  }
+
+  .card {
+    @apply bg-light-surface dark:bg-dark-surface
+           rounded-xl p-6 border border-light-primary/10 dark:border-dark-primary/10
+           shadow-light dark:shadow-dark
+           text-light-text dark:text-dark-text
+           transition-transform duration-200
+           hover:translate-y-[-2px]
+           hover:shadow-light-hover dark:hover:shadow-dark-hover;
+  }
+
+  .glass {
+    @apply bg-white/90 dark:bg-black/90
+           backdrop-blur-sm
+           border border-light-primary/10 dark:border-dark-primary/10
+           rounded-xl;
+  }
+}
+
+/* Toast customization */
+.Toastify__toast {
+  @apply rounded-lg font-orbitron;
+}
+
+.Toastify__toast--success {
+  @apply bg-light-success dark:bg-dark-success text-white;
+}
+
+.Toastify__toast--error {
+  @apply bg-light-error dark:bg-dark-error text-white;
+}
+
+.Toastify__progress-bar {
+  @apply bg-white;
+}
